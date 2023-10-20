@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}
+Profile page
+
+{% endblock title %}
+{% block header %}
+<div class="logo">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="/static/new1.png" alt="Bootstrap" width="79" height="65">
+            </a>
+            <div class=" nav-underline">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/aboutus.html">about us</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/product.html">produts</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/contactus.html" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        contact us
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">whatsapp us</a></li>
+                                        <li><a class="dropdown-item" href="#">gamil us</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Contact creater
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item"
+                                                href="https://api.whatsapp.com/send?phone=8123816894&text=hello%20guys%20i%20am%20naren%20kumar">Whatsapp
+                                                us</a></li>
+                                        <li><a class="dropdown-item" href="#">Gamil us</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="https://www.instagram.com/naren_kumar_s/">Instagram</a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="https://www.linkedin.com/in/s-naren-kumar-1b2471280/">Linkedin</a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+            </div>
+    </nav>
+</div>
+
+{% endblock header %}
+{% block carosel %}
+
+
+{% endblock carosel %}
+
+
+
+
+
+
+{% block main %}
+
+    <div class="container mb-3 text-center">
+        <h1 class="text-center mb-3">Login here</h1>
+        <form method="POST" action="/login">
+            {% csrf_token %}
+            <div class="form-group mb-3 py-4">
+              <label for="name">Enter your name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="your full name ">
+            </div>
+
+
+            <div class="form-group mb-3 py-4">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group mb-3 py-4">
+              <label for="phone">Phone number</label>
+              <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your email">
+            </div>
+            
+            
+            
+            <div class="form-group mb-3 py-4">
+              <label for="desc">Tell me what you like here</label>
+              <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" >Submit</button>
+          </form>
+    </div>
+
+{% endblock main %}
